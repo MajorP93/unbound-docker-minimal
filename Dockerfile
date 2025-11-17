@@ -17,7 +17,7 @@ RUN apk add --update unbound drill bash perl coreutils && \
 COPY data/ /
 
 RUN chmod +x /unbound.sh && \
-    ln -sf /dev/stdout /var/log/unbound.log
+    chown -R unbound:unbound /usr/share/dnssec-root
 
 EXPOSE 53/tcp
 EXPOSE 53/udp

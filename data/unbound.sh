@@ -119,9 +119,9 @@ server:
     # Do not print log lines that say why queries return SERVFAIL to clients
     log-servfail: no
 
-    # Log entries written to /var/log/unbound.log get forwarded to stdout and are therefore picked up by docker log collector
-    # In case you want to silence all logging set "logfile: /dev/null"
-    logfile: /var/log/unbound.log
+    # By setting logfile to "" and use-syslog to "no" we make unbound log to stdout which gets processed by docker log collector automatically.
+    logfile: ""
+    use-syslog: no
 
     # Set logging level
     # Level 0: No verbosity, only errors.
