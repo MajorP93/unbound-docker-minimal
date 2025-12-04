@@ -1,4 +1,4 @@
-FROM alpine:3.22
+FROM alpine:3.23
 LABEL maintainer="MajorP93" \
       org.opencontainers.image.title="majorp93/unbound-minimal" \
       org.opencontainers.image.description="a validating, recursive, and caching DNS resolver" \
